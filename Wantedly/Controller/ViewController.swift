@@ -36,8 +36,12 @@ class ViewController: UIViewController, UITableViewDataSource {
 extension ViewController:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         print("\(indexPath.row)番目のセルをタップ")
-     }
+        let storyboard = UIStoryboard(name: "WebViewController", bundle: nil)
+        let webViewController = storyboard.instantiateInitialViewController() as! WebViewController
+        navigationController?.pushViewController(webViewController, animated: true)
+    }
+    
+ 
     
 }
 

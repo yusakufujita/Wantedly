@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="697.10144927536237" y="93.75"/>
         </scene>
-        <!--WebView-->
+        <!--WebViewController-->
         <scene sceneID="qAM-Q8-Gm1">
             <objects>
-                <viewControllerPlaceholder storyboardName="WebView" id="VBu-AK-ZFS" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="WebViewController" id="VBu-AK-ZFS" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zyV-5n-n3r"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9F-4P-Q9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
