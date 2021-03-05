@@ -15,6 +15,8 @@
 		227B9B6025F1734500BA08BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227B9B5E25F1734500BA08BA /* LaunchScreen.storyboard */; };
 		227B9B6B25F1734500BA08BA /* WantedlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B6A25F1734500BA08BA /* WantedlyTests.swift */; };
 		227B9B7625F1734500BA08BA /* WantedlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B7525F1734500BA08BA /* WantedlyUITests.swift */; };
+		227B9B8E25F2116B00BA08BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B8C25F2116B00BA08BA /* TableViewCell.swift */; };
+		227B9B8F25F2116B00BA08BA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B9B8D25F2116B00BA08BA /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		227B9B7125F1734500BA08BA /* WantedlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WantedlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227B9B7525F1734500BA08BA /* WantedlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedlyUITests.swift; sourceTree = "<group>"; };
 		227B9B7725F1734500BA08BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227B9B8C25F2116B00BA08BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		227B9B8D25F2116B00BA08BA /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				227B9B5925F1734200BA08BA /* Main.storyboard */,
+				227B9B8D25F2116B00BA08BA /* TableViewCell.xib */,
 				227B9B5C25F1734500BA08BA /* Assets.xcassets */,
 			);
 			path = View;
@@ -148,6 +153,7 @@
 				227B9B5325F1734200BA08BA /* AppDelegate.swift */,
 				227B9B5525F1734200BA08BA /* SceneDelegate.swift */,
 				227B9B5725F1734200BA08BA /* ViewController.swift */,
+				227B9B8C25F2116B00BA08BA /* TableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227B9B6025F1734500BA08BA /* LaunchScreen.storyboard in Resources */,
+				227B9B8F25F2116B00BA08BA /* TableViewCell.xib in Resources */,
 				227B9B5D25F1734500BA08BA /* Assets.xcassets in Resources */,
 				227B9B5B25F1734200BA08BA /* Main.storyboard in Resources */,
 			);
@@ -283,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227B9B5825F1734200BA08BA /* ViewController.swift in Sources */,
+				227B9B8E25F2116B00BA08BA /* TableViewCell.swift in Sources */,
 				227B9B5425F1734200BA08BA /* AppDelegate.swift in Sources */,
 				227B9B5625F1734200BA08BA /* SceneDelegate.swift in Sources */,
 			);
