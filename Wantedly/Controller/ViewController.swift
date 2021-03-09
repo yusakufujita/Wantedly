@@ -8,21 +8,28 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
     
     
-    private var articles:[Article] = []
+    private var articles:[Data] = []
     private var searchResult = [Data]()
     private var masterData = [Data]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Wantedly"
+        
+        searchbar.delegate = self
+        searchbar.enablesReturnKeyAutomatically = false
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+        
         // Do any additional setup after loading the view.
 //        loadArticles()
 //        let urlString = "https://www.wantedly.com/api/v1/projects?q=swift&page=1"
@@ -34,28 +41,33 @@ class ViewController: UIViewController, UITableViewDataSource {
         
     }
     // loadする関数の定義
-    private func loadArticles() {
-        // APIを叩く
-        AF.request("https://www.wantedly.com/api/v1/projects?q=swift&page=1").response{ response in
-            guard let data = response.data else {
-                return
-            }
-            print(data)
-            let decoder = JSONDecoder()
-            do {
-                // レスポンスを[Article]にデコード
-                 let articles: [Article] = try decoder.decode([Article].self, from: data) 
-                // 取得した記事をarticlesに代入
-                self.articles = articles
-                print(articles)
-                // tableViewを更新
+    private func fetch() {
+        let urlString = "https://www.wantedly.com/api/v1/projects?q=swift&page=1"
+        let request = AF.request(urlString)
+        request.responseJSON { (response) in
+            do{
+                //            print("response:",response)
+                //取得したデータを変換
+                guard let data = response.data else {return}
+                print(data)
+                let decoder = JSONDecoder()
+                let article = try decoder.decode(Article.self, from: data)
+                self.articles = article.data
+                self.masterData = article.data
                 self.tableView.reloadData()
-            } catch {
-                print(error)
+                print("article:",self.articles.count)
+            }catch {
+                print("変換に失敗しました:",error)
             }
+            
+            //            let article = try decode.decode(Article.self, from: data)
+            //                print("article:",article.title)
+            //            } catch {
+            //                print("変換に失敗しました:",error)
+            //            }
         }
     }
-    
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
