@@ -90,7 +90,6 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
       }
       
       func searchBySearchBarText() {
-          searchbar.endEditing(true)
           //検索結果配列を空にする
           //        print(searchResult)
           if(searchbar.text == "") {
