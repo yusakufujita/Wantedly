@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Nuke
 
 class TableViewCell: UITableViewCell {
     
@@ -13,6 +14,11 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
+    func set(title:String,author:String,imageUrl:String,looking_for:String) {
+        Nuke.loadImage(with: URL(string: imageUrl)!, into: ImageView)
+        titleLabel.text = title
+        detailLabel.text = author
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

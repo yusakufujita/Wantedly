@@ -8,20 +8,20 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+class DetailViewController: UIViewController {
     
     private let webView = WKWebView()
+    
+    var url:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // webViewの大きさを画面全体にして表示
-            webView.frame = view.frame
-            view.addSubview(webView)
-
-        // URLを指定してロードする
-            let url = URL(string: "https://www.google.com")
-            let request = URLRequest(url: url!)
-            webView.load(request)
+//            webView.frame = view.frame
+//            view.addSubview(webView)
+//            let url = URL(string: self.url)
+//            let request = URLRequest(url: url!)
+//            webView.load(request)
         // Do any additional setup after loading the view.
     }
     
