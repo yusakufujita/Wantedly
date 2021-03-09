@@ -4,7 +4,7 @@ Wantedly様のインターンの提出用課題として、Wantedlyを作りま�
 
 
 # DEMO
-
+![RocketSim Recording - iPhone 11 - 2021-03-10 06 47 25](https://user-images.githubusercontent.com/48333289/110542888-f6ae4800-816c-11eb-8d0e-c3e15930353f.gif)
 
 
 # 工夫したところ
