@@ -9,12 +9,6 @@ import Foundation
 
 struct Article: Decodable {
     let data:[Data]
-//    enum CodingKeys: String, CodingKey {
-//        case title = "title"
-//        case lookingFor = "looking_for"
-//        case image
-//        case company
-//    }
 }
 struct Data: Decodable {
     let title: String
@@ -31,9 +25,7 @@ struct Staffing:Decodable {
 
 struct Image: Decodable {
     let i_320_131:String
-//    enum CodingKeys:String,CodingKey {
-//        case i3201311 = "i_320_131"
-//    }
+
 }
 
 struct Company:Decodable {

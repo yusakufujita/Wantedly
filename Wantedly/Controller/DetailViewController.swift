@@ -34,6 +34,8 @@ class DetailViewController: UIViewController,UIPopoverPresentationControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        logoImage.layer.cornerRadius = 23
+        
         applyButton.layer.cornerRadius = 20
         
         Nuke.loadImage(with: URL(string: ImageView)!, into: imageView)
