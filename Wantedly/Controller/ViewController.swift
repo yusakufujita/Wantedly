@@ -108,17 +108,24 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
 extension ViewController:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "DetailViewController", bundle: nil)
-        let webViewController = storyboard.instantiateInitialViewController() as! DetailViewController
-        // ③indexPathを使用してarticlesから選択されたarticleを取得
+//        print("\(indexPath.row)番目のセルをタップ")
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        let detailVC = storyboard.instantiateInitialViewController() as! DetailViewController
+//        // ③indexPathを使用してarticlesから選択されたarticleを取得
         let article = articles[indexPath.row]
-        // ④urlとtitleを代入
-        webViewController.url = article.looking_for
-        webViewController.title = article.title
-        navigationController?.pushViewController(webViewController, animated: true)
+//        detailVC.set(imageUrl: article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl: article.company.avatar.original, company_name: article.company.name)
+//        // ④urlとtitleを代入
+        detailVC.mainTitle = article.title
+        detailVC.subTitle = article.looking_for
+        detailVC.ImageView = article.image.i_320_131
+        detailVC.logoimage = article.company.avatar.original
+        detailVC.company = article.company.name
+        detailVC.Text = article.description
+        detailVC.Founder = article.company.founder
+        detailVC.FounderText = article.staffings[0].description
+//        detailViewController.subtitleLabel?.text = article.looking_for
+        
+//        detailViewController.title = article.title
+        navigationController?.pushViewController(detailVC, animated: true)
     }
-    
-    
-    
 }
-
