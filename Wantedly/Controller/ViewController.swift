@@ -11,8 +11,12 @@ import Alamofire
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchbar: UISearchBar!
+    
     
     private var articles:[Article] = []
+    private var searchResult = [Data]()
+    private var masterData = [Data]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
