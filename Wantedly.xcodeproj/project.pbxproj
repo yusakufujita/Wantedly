@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0BED5CCEC6DD223ED827F89B /* Pods_Wantedly_WantedlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDD19C19FE82114BE68ECB2 /* Pods_Wantedly_WantedlyUITests.framework */; };
 		141A297FB71F1B76B48C146D /* Pods_Wantedly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5326C58DD68C46BB831BF67 /* Pods_Wantedly.framework */; };
+		2235BFD725F7DD2900C1BB47 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2235BFD625F7DD2900C1BB47 /* Popover.storyboard */; };
+		2235BFDF25F7DE0C00C1BB47 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235BFDE25F7DE0C00C1BB47 /* PopoverViewController.swift */; };
 		227B9B5425F1734200BA08BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B5325F1734200BA08BA /* AppDelegate.swift */; };
 		227B9B5625F1734200BA08BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B5525F1734200BA08BA /* SceneDelegate.swift */; };
 		227B9B5825F1734200BA08BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9B5725F1734200BA08BA /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		0EE663C10B7F57966797F237 /* Pods-WantedlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WantedlyTests.release.xcconfig"; path = "Target Support Files/Pods-WantedlyTests/Pods-WantedlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CF90A8D0732BB37E2BDECF1 /* Pods-Wantedly-WantedlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wantedly-WantedlyUITests.release.xcconfig"; path = "Target Support Files/Pods-Wantedly-WantedlyUITests/Pods-Wantedly-WantedlyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1DDD19C19FE82114BE68ECB2 /* Pods_Wantedly_WantedlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wantedly_WantedlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2235BFD625F7DD2900C1BB47 /* Popover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
+		2235BFDE25F7DE0C00C1BB47 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		227B9B5025F1734200BA08BA /* Wantedly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wantedly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227B9B5325F1734200BA08BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227B9B5525F1734200BA08BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				227B9B5925F1734200BA08BA /* Main.storyboard */,
 				227B9B9925F21B6D00BA08BA /* Detail.storyboard */,
+				2235BFD625F7DD2900C1BB47 /* Popover.storyboard */,
 				227B9B8D25F2116B00BA08BA /* TableViewCell.xib */,
 				227B9B5C25F1734500BA08BA /* Assets.xcassets */,
 			);
@@ -184,6 +189,7 @@
 				227B9B5725F1734200BA08BA /* ViewController.swift */,
 				227B9BA125F21B9D00BA08BA /* DetailViewController.swift */,
 				227B9B8C25F2116B00BA08BA /* TableViewCell.swift */,
+				2235BFDE25F7DE0C00C1BB47 /* PopoverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				227B9B6025F1734500BA08BA /* LaunchScreen.storyboard in Resources */,
 				227B9B8F25F2116B00BA08BA /* TableViewCell.xib in Resources */,
 				227B9B5D25F1734500BA08BA /* Assets.xcassets in Resources */,
+				2235BFD725F7DD2900C1BB47 /* Popover.storyboard in Resources */,
 				227B9B5B25F1734200BA08BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +462,7 @@
 			files = (
 				227B9BCA25F22AAC00BA08BA /* Article.swift in Sources */,
 				227B9B5825F1734200BA08BA /* ViewController.swift in Sources */,
+				2235BFDF25F7DE0C00C1BB47 /* PopoverViewController.swift in Sources */,
 				227B9B8E25F2116B00BA08BA /* TableViewCell.swift in Sources */,
 				227B9B5425F1734200BA08BA /* AppDelegate.swift in Sources */,
 				227B9BA225F21B9D00BA08BA /* DetailViewController.swift in Sources */,
