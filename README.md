@@ -1,4 +1,4 @@
-# Wantedlyリポジトリ/プロジェクト/OSSなどの名前）
+# Wantedly(リポジトリ/プロジェクト/OSSなどの名前）
 
 Wantedly様の提出用課題として、Wantedlyを作りました。
 
