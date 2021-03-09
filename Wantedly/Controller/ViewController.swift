@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     private var searchResult = [Data]()
     private var masterData = [Data]()
     
+    var queue = DispatchQueue(label: "", attributes: [])
+
+    
     var activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
@@ -71,23 +74,39 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
             }
         }
     }
-    //テキスト変更時の呼び出しメソッド
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchbar.endEditing(true)
-        //検索結果配列を空にする
-        //        print(searchResult)
-        if(searchbar.text == "") {
-            //検索文字列が空の場合はすべてを表示する。
-            articles = masterData
-        }else {
-            searchResult = masterData.filter{$0.looking_for.contains(searchbar.text!) || $0.title.contains(searchbar.text!) || $0.company.name.contains(searchbar.text!) || $0.description.contains(searchbar.text!)}
-            
-            articles = searchResult
-            print("searchResultの結果は、\(searchResult)")
-        }
-        //        //テーブルを再読み込みする。
-        tableView.reloadData()
-    }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+          // 確定前の文字入力を検知します
+          // return trueして文字入力が確定した後にsearchBarの文字を取得する処理を遅延実行します
+//          let delayTime = DispatchTime.now() + Double(Int64(NSEC_PER_SEC * 5)) / Double(NSEC_PER_SEC)
+//          queue.asyncAfter(deadline: delayTime) {
+//              self.searchBySearchBarText()
+//          }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.searchBySearchBarText()
+         }
+          return true
+      }
+      
+      func searchBySearchBarText() {
+          searchbar.endEditing(true)
+          //検索結果配列を空にする
+          //        print(searchResult)
+          if(searchbar.text == "") {
+              //検索文字列が空の場合はすべてを表示する。
+              articles = masterData
+          }else {
+              searchResult = masterData.filter{$0.looking_for.contains(searchbar.text!) || $0.title.contains(searchbar.text!) || $0.company.name.contains(searchbar.text!) || $0.description.contains(searchbar.text!)}
+              
+              articles = searchResult
+              print("searchResultの結果は、\(searchResult)")
+          }
+          //        //テーブルを再読み込みする。
+          tableView.reloadData()
+      }
+
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
