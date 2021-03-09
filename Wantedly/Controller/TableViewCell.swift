@@ -26,11 +26,8 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        ImageView.image = image
-//        titleLabel.text = title
-//        detailLabel.text = detail 
-        
-        // Initialization code
+        logoImage.layer.cornerRadius = 23
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
