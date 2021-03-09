@@ -135,7 +135,6 @@
 				227B9B8625F202A600BA08BA /* Model */,
 				227B9B8725F202AD00BA08BA /* View */,
 				227B9B8825F202B300BA08BA /* Controller */,
-				227B9B5E25F1734500BA08BA /* LaunchScreen.storyboard */,
 				227B9B6125F1734500BA08BA /* Info.plist */,
 			);
 			path = Wantedly;
@@ -174,6 +173,7 @@
 				227B9B9925F21B6D00BA08BA /* Detail.storyboard */,
 				2235BFD625F7DD2900C1BB47 /* Popover.storyboard */,
 				227B9B8D25F2116B00BA08BA /* TableViewCell.xib */,
+				227B9B5E25F1734500BA08BA /* LaunchScreen.storyboard */,
 				227B9B5C25F1734500BA08BA /* Assets.xcassets */,
 			);
 			path = View;

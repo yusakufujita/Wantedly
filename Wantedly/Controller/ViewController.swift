@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 
+
 class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,8 +19,17 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     private var searchResult = [Data]()
     private var masterData = [Data]()
     
+    var activityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .whiteLarge
+        activityIndicatorView.color = UIColor(red: 44/255, green: 169/255, blue: 225/255, alpha: 1)
+        view.addSubview(activityIndicatorView)
+        
+        activityIndicatorView.startAnimating()
         
         self.navigationItem.title = "Wantedly"
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 255, blue: 73, alpha: 1.0)
@@ -46,6 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
             do{
                 //            print("response:",response)
                 //取得したデータを変換
+                self.activityIndicatorView.stopAnimating()
+                
                 guard let data = response.data else {return}
                 print(data)
                 let decoder = JSONDecoder()
@@ -87,9 +99,13 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
         guard let cell  = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
+        
         let article = articles[indexPath.row]
+        activityIndicatorView.stopAnimating()
+
         cell.set(imageUrl:article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl:article.company.avatar.original,company_name: article.company.name)
         //        cell.set(title: article.title, author: article.lookingFor,imageUrl: article.lookingFor, lookingFor: article.llookingFor)
+        
         return cell
     }
     
