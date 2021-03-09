@@ -28,10 +28,11 @@
                                     <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btc-l7-baJ">
                                         <rect key="frame" x="0.0" y="16" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,6 +40,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="whO-t0-SkN"/>
                     <connections>
+                        <outlet property="searchback" destination="E1O-SK-lRn" id="mcD-IU-jk2"/>
                         <outlet property="searchbar" destination="btc-l7-baJ" id="pox-kc-W6u"/>
                         <outlet property="tableView" destination="AbW-EO-Snh" id="bHl-rl-ZrZ"/>
                     </connections>
@@ -69,6 +71,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

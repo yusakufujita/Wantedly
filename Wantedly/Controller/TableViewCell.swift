@@ -15,6 +15,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var MaintitleLabel: UILabel!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var backView: UIView!
     
     func set(imageUrl:String,title:String,Subtitle:String,logoUrl:String,company_name:String) {
         Nuke.loadImage(with: URL(string: imageUrl)!, into: ImageView)
@@ -25,6 +26,8 @@ class TableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        backView.backgroundColor = UIColor(red: 0, green: 255, blue: 73, alpha: 1.0)
         
         logoImage.layer.cornerRadius = 23
 
