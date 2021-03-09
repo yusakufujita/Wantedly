@@ -1,6 +1,6 @@
 # Wantedly(https://github.com/yusakufujita/Wantedly）
 
-Wantedly様の提出用課題として、Wantedlyを作りました。
+Wantedly様のインターンの提出用課題として、Wantedlyを作りました。
 
 
 # DEMO
