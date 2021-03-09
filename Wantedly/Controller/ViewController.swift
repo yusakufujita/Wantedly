@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
+    @IBOutlet weak var searchback: UIView!
     
     private var articles:[Data] = []
     private var searchResult = [Data]()
@@ -19,7 +20,13 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.title = "Wantedly"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 255, blue: 73, alpha: 1.0)
+        
+        searchback.backgroundColor = UIColor(red: 0, green: 255, blue: 73, alpha: 1.0)
+        searchbar.backgroundColor = UIColor(red: 0, green: 255, blue: 73, alpha: 1.0)
+        
         
         searchbar.delegate = self
         searchbar.enablesReturnKeyAutomatically = false
