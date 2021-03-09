@@ -67,21 +67,41 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
             //            }
         }
     }
-
+    //テキスト変更時の呼び出しメソッド
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchbar.endEditing(true)
+        //検索結果配列を空にする
+//        print(searchResult)
+        if(searchbar.text == "") {
+            //検索文字列が空の場合はすべてを表示する。
+            articles = masterData
+        }else {
+            searchResult = masterData.filter{$0.looking_for.contains(searchbar.text!) || $0.title.contains(searchbar.text!) || $0.company.name.contains(searchbar.text!) || $0.description.contains(searchbar.text!)}
+            
+            articles = searchResult
+            print("searchResultの結果は、\(searchResult)")
+        }
+//        //テーブルを再読み込みする。
+        tableView.reloadData()
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
         
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell  = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
         let article = articles[indexPath.row]
-        cell.set(title: article.title, author: article.looking_for,imageUrl: article.looking_for, looking_for: article.looking_for)
+        cell.set(imageUrl:article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl:article.company.avatar.original,company_name: article.company.name)
+//        cell.set(title: article.title, author: article.lookingFor,imageUrl: article.lookingFor, lookingFor: article.llookingFor)
         return cell
     }
+    
 }
 
 

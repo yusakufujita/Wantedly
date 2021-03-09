@@ -11,15 +11,18 @@ import Nuke
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var ImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var SubtitleLabel: UILabel!
+    @IBOutlet weak var MaintitleLabel: UILabel!
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var companyLabel: UILabel!
     
-    func set(title:String,author:String,imageUrl:String,looking_for:String) {
+    func set(imageUrl:String,title:String,Subtitle:String,logoUrl:String,company_name:String) {
         Nuke.loadImage(with: URL(string: imageUrl)!, into: ImageView)
-        titleLabel.text = title
-        detailLabel.text = author
+        Nuke.loadImage(with: URL(string: logoUrl)!, into: logoImage)
+        MaintitleLabel.text = title
+        SubtitleLabel.text = Subtitle
+        companyLabel.text = company_name
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
