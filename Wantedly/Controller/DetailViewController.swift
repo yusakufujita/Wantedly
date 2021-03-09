@@ -69,6 +69,12 @@ class DetailViewController: UIViewController,UIPopoverPresentationControllerDele
         
     }
     
+    // iPhoneで表示させる場合に必要
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    
 
     /*
     // MARK: - Navigation

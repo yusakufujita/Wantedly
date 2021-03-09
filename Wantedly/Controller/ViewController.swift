@@ -9,10 +9,9 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchbar: UISearchBar!
-    
     
     private var articles:[Data] = []
     private var searchResult = [Data]()
@@ -29,16 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
         tableView.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
-        
-        // Do any additional setup after loading the view.
-//        loadArticles()
-//        let urlString = "https://www.wantedly.com/api/v1/projects?q=swift&page=1"
-//        let request = AF.request(urlString)
-//
-//        request.responseJSON{(response) in
-//            print("response:", response)
-//        }
-        
+        fetch()
+
     }
     // loadする関数の定義
     private func fetch() {
@@ -59,19 +50,13 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
             }catch {
                 print("変換に失敗しました:",error)
             }
-            
-            //            let article = try decode.decode(Article.self, from: data)
-            //                print("article:",article.title)
-            //            } catch {
-            //                print("変換に失敗しました:",error)
-            //            }
         }
     }
     //テキスト変更時の呼び出しメソッド
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchbar.endEditing(true)
         //検索結果配列を空にする
-//        print(searchResult)
+        //        print(searchResult)
         if(searchbar.text == "") {
             //検索文字列が空の場合はすべてを表示する。
             articles = masterData
@@ -81,10 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
             articles = searchResult
             print("searchResultの結果は、\(searchResult)")
         }
-//        //テーブルを再読み込みする。
+        //        //テーブルを再読み込みする。
         tableView.reloadData()
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
@@ -98,7 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
         }
         let article = articles[indexPath.row]
         cell.set(imageUrl:article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl:article.company.avatar.original,company_name: article.company.name)
-//        cell.set(title: article.title, author: article.lookingFor,imageUrl: article.lookingFor, lookingFor: article.llookingFor)
+        //        cell.set(title: article.title, author: article.lookingFor,imageUrl: article.lookingFor, lookingFor: article.llookingFor)
         return cell
     }
     
@@ -108,13 +92,12 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
 extension ViewController:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("\(indexPath.row)番目のセルをタップ")
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         let detailVC = storyboard.instantiateInitialViewController() as! DetailViewController
-//        // ③indexPathを使用してarticlesから選択されたarticleを取得
+        // indexPathを使用してarticlesから選択されたarticleを取得
         let article = articles[indexPath.row]
-//        detailVC.set(imageUrl: article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl: article.company.avatar.original, company_name: article.company.name)
-//        // ④urlとtitleを代入
+        //        detailVC.set(imageUrl: article.image.i_320_131, title: article.title, Subtitle: article.looking_for, logoUrl: article.company.avatar.original, company_name: article.company.name)
+        //        // ④urlとtitleを代入
         detailVC.mainTitle = article.title
         detailVC.subTitle = article.looking_for
         detailVC.ImageView = article.image.i_320_131
@@ -123,9 +106,7 @@ extension ViewController:UITableViewDelegate {
         detailVC.Text = article.description
         detailVC.Founder = article.company.founder
         detailVC.FounderText = article.staffings[0].description
-//        detailViewController.subtitleLabel?.text = article.looking_for
-        
-//        detailViewController.title = article.title
+      
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

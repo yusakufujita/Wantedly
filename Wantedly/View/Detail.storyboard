@@ -117,7 +117,6 @@
                         <outlet property="imageView" destination="8ka-f3-crn" id="bhU-5U-4J7"/>
                         <outlet property="logoImage" destination="sVv-tA-WAC" id="V33-07-Oqj"/>
                         <outlet property="maintitleLabel" destination="UqX-5E-aQs" id="v6y-Tb-P5d"/>
-                        <outlet property="scrollView" destination="tWk-TX-5yj" id="JPy-wx-UbW"/>
                         <outlet property="subtitleLabel" destination="W8p-Lc-cGp" id="mpU-RM-M0j"/>
                         <outlet property="text" destination="3E1-Dh-Fo5" id="B3f-cs-mvK"/>
                     </connections>

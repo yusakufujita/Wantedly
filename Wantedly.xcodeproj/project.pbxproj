@@ -23,7 +23,6 @@
 		227B9B8F25F2116B00BA08BA /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B9B8D25F2116B00BA08BA /* TableViewCell.xib */; };
 		227B9B9A25F21B6D00BA08BA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227B9B9925F21B6D00BA08BA /* Detail.storyboard */; };
 		227B9BA225F21B9D00BA08BA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9BA125F21B9D00BA08BA /* DetailViewController.swift */; };
-		227B9BAB25F21C1200BA08BA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227B9BAA25F21C1200BA08BA /* WebKit.framework */; };
 		227B9BCA25F22AAC00BA08BA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B9BC925F22AAC00BA08BA /* Article.swift */; };
 		85CB014267AA45DB4B3A209D /* Pods_WantedlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E75F6FE85CF0CB8DE34A8 /* Pods_WantedlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -85,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227B9BAB25F21C1200BA08BA /* WebKit.framework in Frameworks */,
 				141A297FB71F1B76B48C146D /* Pods_Wantedly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,8 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-EO-Snh">
-                                <rect key="frame" x="0.0" y="154" width="414" height="708"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-EO-Snh">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1O-SK-lRn">
@@ -35,12 +36,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="AbW-EO-Snh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="93h-Zr-jXc"/>
-                            <constraint firstItem="AbW-EO-Snh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TtW-l0-pal"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AbW-EO-Snh" secondAttribute="trailing" id="bCJ-zH-KSN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AbW-EO-Snh" secondAttribute="bottom" id="f7A-5T-FcN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="whO-t0-SkN"/>
                     <connections>
