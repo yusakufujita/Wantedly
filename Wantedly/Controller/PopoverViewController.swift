@@ -13,7 +13,7 @@ class PopoverViewController: UIViewController {
         super.viewDidLoad()
         
         let titleLabel2 = UILabel() // ラベルの生成
-        titleLabel2.frame = CGRect(x: -10, y: 50, width: UIScreen.main.bounds.size.width, height: 100) // 位置とサイズの指定
+        titleLabel2.frame = CGRect(x: -28, y: 50, width: UIScreen.main.bounds.size.width, height: 100) // 位置とサイズの指定
         titleLabel2.font = titleLabel2.font.withSize(1)
         titleLabel2.textAlignment = NSTextAlignment.center // 横揃えの設定
         titleLabel2.text = """
