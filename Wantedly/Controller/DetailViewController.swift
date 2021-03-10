@@ -21,14 +21,14 @@ class DetailViewController: UIViewController,UIPopoverPresentationControllerDele
     @IBOutlet weak var applyButton: UIButton!
     
     
-    var ImageView: String!
-    var mainTitle:String!
-    var subTitle:String!
-    var logoimage:String!
-    var company:String!
-    var Text:String!
-    var Founder:String!
-    var FounderText:String!
+     var ImageView: String!
+     var mainTitle:String!
+     var subTitle:String!
+     var logoimage:String!
+     var company:String!
+     var Text:String!
+     var Founder:String!
+     var FounderText:String!
     
     
     override func viewDidLoad() {

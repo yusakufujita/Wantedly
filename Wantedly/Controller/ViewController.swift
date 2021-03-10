@@ -18,11 +18,8 @@ class ViewController: UIViewController, UITableViewDataSource,UISearchBarDelegat
     private var articles:[Data] = []
     private var searchResult = [Data]()
     private var masterData = [Data]()
-    
-    var queue = DispatchQueue(label: "", attributes: [])
-
-    
-    var activityIndicatorView = UIActivityIndicatorView()
+    private var queue = DispatchQueue(label: "", attributes: [])
+    private var activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
