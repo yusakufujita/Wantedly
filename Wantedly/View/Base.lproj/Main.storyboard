@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-EO-Snh">
-                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AbW-EO-Snh">
+                                <rect key="frame" x="0.0" y="177.5" width="414" height="684.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="698" id="duB-C6-eBA"/>
                                 </constraints>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1O-SK-lRn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="76"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="89.5"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btc-l7-baJ">
                                         <rect key="frame" x="0.0" y="16" width="414" height="44"/>
@@ -45,6 +45,7 @@
                             <constraint firstItem="E1O-SK-lRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7y-sS-kvY"/>
                             <constraint firstItem="E1O-SK-lRn" firstAttribute="trailing" secondItem="AbW-EO-Snh" secondAttribute="trailing" id="Ti5-YA-9Vw"/>
                             <constraint firstItem="AbW-EO-Snh" firstAttribute="top" secondItem="E1O-SK-lRn" secondAttribute="bottom" id="tBk-pr-Ceb"/>
+                            <constraint firstItem="E1O-SK-lRn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="tUk-ut-rJf"/>
                             <constraint firstItem="E1O-SK-lRn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wKf-GR-b9z"/>
                         </constraints>
                     </view>
