@@ -52,26 +52,18 @@ class DetailViewController: UIViewController,UIPopoverPresentationControllerDele
     @IBAction func applyButton(_ sender: Any) {
         
         let contentVC = PopoverViewController()
-        // スタイルの指定
         contentVC.modalPresentationStyle = .popover
         contentVC.view.backgroundColor = .orange
-        // サイズの指定
         contentVC.preferredContentSize = CGSize(width: 400, height: 400)
-        // 表示するViewの指定
         contentVC.popoverPresentationController?.sourceView = view
-        // ピヨッと表示する位置の指定
         contentVC.popoverPresentationController?.sourceRect = (sender as AnyObject).frame
-        // 矢印が出る方向の指定
         contentVC.popoverPresentationController?.permittedArrowDirections = .unknown
         contentVC.popoverPresentationController?.permittedArrowDirections.isEmpty
-        // デリゲートの設定
         contentVC.popoverPresentationController?.delegate = self
-        //表示
         present(contentVC, animated: true, completion: nil)
         
     }
     
-    // iPhoneで表示させる場合に必要
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }
